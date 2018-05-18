@@ -53,10 +53,15 @@ class QuadTree {
         if (!divided) {
           subdivide();
         }
-        qne.insert(new Pointt(new PVector(random(width), random(height))));
-        qnw.insert(new Pointt(new PVector(random(width), random(height))));
-        qse.insert(new Pointt(new PVector(random(width), random(height))));
-        qsw.insert(new Pointt(new PVector(random(width), random(height))));
+        //qne.insert(new Pointt(new PVector(random(width), random(height))));
+        //qnw.insert(new Pointt(new PVector(random(width), random(height))));
+        //qse.insert(new Pointt(new PVector(random(width), random(height))));
+        //qsw.insert(new Pointt(new PVector(random(width), random(height))));
+        
+        qne.insert(new Pointt(new PVector(mouseX, mouseY)));
+        qnw.insert(new Pointt(new PVector(mouseX, mouseY)));
+        qse.insert(new Pointt(new PVector(mouseX, mouseY)));
+        qsw.insert(new Pointt(new PVector(mouseX, mouseY)));
       }
     }
   }
@@ -97,7 +102,7 @@ class QuadTree {
       Pointt p = points[i];
       strokeWeight(4);
       stroke(255);
-      
+
       try {
         point(p.loc.x, p.loc.y);
       } 
